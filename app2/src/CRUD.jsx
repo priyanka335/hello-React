@@ -22,7 +22,7 @@ class CRUD extends Component {
   };
 
   handleClear = () => {
-    let user = { id: "", email: "", username: "", password: "" };
+    let user = { id: "", title: "", url: "", thumbnailurl: "" };
     this.setState({ myUser: user });
   };
   handleChange = (e) => {
@@ -64,30 +64,30 @@ class CRUD extends Component {
             }}
           />{" "}
           <br />
-          <label htmlFor="email">Email :</label>
+          <label htmlFor="title">title:</label>
           <input
             type="text"
-            value={myUser.email}
-            name="email"
+            value={myUser.title}
+            name="title"
             onChange={(e) => {
               this.handleChange(e);
             }}
           />{" "}
           <br />
-          <label htmlFor="username">User Name :</label>
+          <label htmlFor="url">url :</label>
           <input
             type="text"
-            value={myUser.username}
+            value={myUser.url}
             name="username"
             onChange={(e) => {
               this.handleChange(e);
             }}
           />{" "}
           <br />
-          <label htmlFor="password">Password : </label>
+          <label htmlFor="thmubnailurl">thumbnailurl : </label>
           <input
             type="text"
-            value={myUser.password}
+            value={myUser.thumbnailurl}
             name="password"
             onChange={(e) => {
               this.handleChange(e);
@@ -121,9 +121,9 @@ class CRUD extends Component {
               return (
                 <tr key={i}>
                   <td>{user.id}</td>
-                  <td>{user.email}</td>
-                  <td>{user.username}</td>
-                  <td>{user.password}</td>
+                  <td>{user.title}</td>
+                  <td>{user.url}</td>
+                  <td>{user.thumbnailurl}</td>
                   <td>
                     <button
                       onClick={() => {
